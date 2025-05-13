@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haut Foods | Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Haut Foods</h1>
+            <button class="hamburger" aria-label="Menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">Dark Mode</button>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p>Seasonal ingredients, exceptional flavors</p>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-category">
+                <h3>Starters</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu-items/bruschetta.jpg" alt="Bruschetta">
+                        <div class="item-info">
+                            <h4>Tuscan Bruschetta</h4>
+                            <p>Toasted bread topped with tomatoes, garlic, and fresh basil</p>
+                            <span class="price">$9.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/menu-items/soup.jpg" alt="Soup">
+                        <div class="item-info">
+                            <h4>Seasonal Soup</h4>
+                            <p>Chef's selection of the day, served with artisan bread</p>
+                            <span class="price">$8.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/menu-items/salad.jpg" alt="Salad">
+                        <div class="item-info">
+                            <h4>Harvest Salad</h4>
+                            <p>Mixed greens, roasted vegetables, goat cheese, and balsamic glaze</p>
+                            <span class="price">$11.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Main Courses</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu-items/steak.jpg" alt="Steak">
+                        <div class="item-info">
+                            <h4>Filet Mignon</h4>
+                            <p>8oz grass-fed beef, truffle mashed potatoes, seasonal vegetables</p>
+                            <span class="price">$32.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/menu-items/pasta.jpg" alt="Pasta">
+                        <div class="item-info">
+                            <h4>Lobster Ravioli</h4>
+                            <p>Homemade pasta filled with lobster, in a saffron cream sauce</p>
+                            <span class="price">$26.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/menu-items/salmon.jpg" alt="Salmon">
+                        <div class="item-info">
+                            <h4>Pan-Seared Salmon</h4>
+                            <p>Wild-caught salmon with lemon butter sauce, quinoa, and asparagus</p>
+                            <span class="price">$24.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="images/menu-items/tiramisu.jpg" alt="Tiramisu">
+                        <div class="item-info">
+                            <h4>Classic Tiramisu</h4>
+                            <p>Layers of coffee-soaked ladyfingers and mascarpone cream</p>
+                            <span class="price">$8.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/menu-items/chocolate-cake.jpg" alt="Chocolate Cake">
+                        <div class="item-info">
+                            <h4>Flourless Chocolate Cake</h4>
+                            <p>Rich chocolate served with raspberry coulis and vanilla ice cream</p>
+                            <span class="price">$9.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="images/menu-items/creme-brulee.jpg" alt="Crème Brûlée">
+                        <div class="item-info">
+                            <h4>Vanilla Crème Brûlée</h4>
+                            <p>Classic French dessert with caramelized sugar crust</p>
+                            <span class="price">$8.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h3>Haut Foods</h3>
+                <p>123 Culinary Street<br>Gourmet City, GC 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@hautfoods.com</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 11am - 10pm</p>
+                <p>Saturday - Sunday: 10am - 11pm</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Haut Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+            // Hamburger menu functionality
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-list a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                if (document.body.classList.contains('dark-theme')) {
+                    themeToggle.textContent = 'Light Mode';
+                } else {
+                    themeToggle.textContent = 'Dark Mode';
+                }
+            });
+    </script>
+</body>
+</html>

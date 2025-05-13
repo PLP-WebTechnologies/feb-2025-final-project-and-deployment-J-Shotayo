@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haut Foods | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Haut Foods</h1>
+            <button class="hamburger" aria-label="Menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">Dark Mode</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Artisanal Flavors, Crafted with Care</h2>
+            <p>Experience culinary excellence in the heart of the city</p>
+            <a href="reservations.html" class="btn">Book a Table</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Founded in 2010, Haut Foods brings together traditional recipes with modern techniques. Our chef, with over 20 years of international experience, creates dishes that tell a story of passion and dedication to quality ingredients.</p>
+        </div>
+    </section>
+
+    <section class="slider-section">
+        <div class="container">
+            <h2>Featured Dishes</h2>
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/slider1.jpg" alt="Signature Dish">
+                    <div class="slide-caption">
+                        <h3>Signature Beef Wellington</h3>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider2.jpg" alt="Seasonal Special">
+                    <div class="slide-caption">
+                        <h3>Summer Truffle Pasta</h3>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider3.jpg" alt="Dessert">
+                    <div class="slide-caption">
+                        <h3>Chocolate Soufflé</h3>
+                    </div>
+                </div>
+                <button class="slider-btn prev-btn">&#10094;</button>
+                <button class="slider-btn next-btn">&#10095;</button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h3>Haut Foods</h3>
+                <p>123 Culinary Street<br>Gourmet City, GC 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@hautfoods.com</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 11am - 10pm</p>
+                <p>Saturday - Sunday: 10am - 11pm</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Haut Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/slider.js"></script>
+    <script>
+            // Hamburger menu functionality
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-list a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                if (document.body.classList.contains('dark-theme')) {
+                    themeToggle.textContent = 'Light Mode';
+                } else {
+                    themeToggle.textContent = 'Dark Mode';
+                }
+            });
+    </script>
+</body>
+</html>
